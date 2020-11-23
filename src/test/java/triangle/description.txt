@@ -1,0 +1,6 @@
+triangle/Triangle
+    -Create unit tests for the class Triangle with 100% code coverage.
+    -Fix any errors in the Triangle code.
+    -Refactor and Clean the code. Look at suggestions from IntelliJ, method and variable naming
+     and maybe we can use some stream function for solving our uniqueSides() method?
+     Try writing sides.st eller sides.d and look at the suggestions.
