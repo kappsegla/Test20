@@ -9,7 +9,7 @@ import java.io.PrintStream;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class SomeClassTest {
+public class SomeClassTestX {
 
     public static final int NUMBER = 77;
     public static final int NUMBER_DOUBLED = 154;

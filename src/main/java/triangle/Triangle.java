@@ -16,8 +16,8 @@ public class Triangle {
     public Triangle(Point a, Point b, Point c) {
         sides = new double[3];
         sides[0] = Math.sqrt(Math.pow(b.x - a.x, 2.0) + Math.pow(b.y - a.y, 2.0));
-        sides[1] = Math.sqrt(Math.pow(b.x - c.x, 2.0) + Math.pow(b.x - a.x, 2.0));
-        sides[2] = Math.sqrt(Math.pow(c.x - a.x, 2.0) + Math.pow(c.x - a.x, 2.0));
+        sides[1] = Math.sqrt(Math.pow(b.x - c.x, 2.0) + Math.pow(b.y - c.y, 2.0));
+        sides[2] = Math.sqrt(Math.pow(c.x - a.x, 2.0) + Math.pow(c.y - a.y, 2.0));
     }
 
     public Triangle(Point[] s) {
@@ -47,14 +47,14 @@ public class Triangle {
     }
 
     public boolean isScalene() {
-        if (uniqueSides() == 1) {
+        if (uniqueSides() == 3) {
             return true;
         }
         return false;
     }
 
     public boolean isEquilateral() {
-        if (uniqueSides() == 3) {
+        if (uniqueSides() == 1) {
             return true;
         }
         return false;
