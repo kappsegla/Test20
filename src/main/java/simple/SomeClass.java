@@ -7,11 +7,7 @@ public class SomeClass {
     }
 
     public boolean returnABoolean(String inputData) {
-        if ("Save".equalsIgnoreCase(inputData)) {
-            return true;
-        } else {
-            return false;
-        }
+        return "Save".equalsIgnoreCase(inputData);
     }
 
     public void voidFoo(String inputData) {
