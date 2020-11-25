@@ -47,10 +47,7 @@ public class Triangle {
     }
 
     public boolean isScalene() {
-        if (uniqueSides() == 3) {
-            return true;
-        }
-        return false;
+        return uniqueSides() == 3;
     }
 
     public boolean isEquilateral() {

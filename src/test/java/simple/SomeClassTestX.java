@@ -1,5 +1,6 @@
 package simple;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -18,7 +19,7 @@ public class SomeClassTestX {
 
     @Test
     void Double_A_Number_Returns_Number_Doubled() {
-        assertEquals(NUMBER_DOUBLED, someClass.doubleANumber(NUMBER));
+        assertEquals(NUMBER_DOUBLED, someClass.doubleANumber(NUMBER),"Number should be doubled but was not.");
     }
 
     @Test
