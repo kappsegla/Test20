@@ -59,11 +59,11 @@
             <artifactId>joda-money</artifactId>
             <version>1.0.1</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.h2database</groupId>-->
-<!--            <artifactId>h2</artifactId>-->
-<!--            <version>1.4.200</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.200</version>
+        </dependency>
         <!--Legacy project-->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>

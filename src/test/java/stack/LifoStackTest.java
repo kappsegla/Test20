@@ -8,42 +8,33 @@ import static org.junit.jupiter.api.Assertions.*;
 public class LifoStackTest {
 
     @Test
-    void createInstanceOfStack(){
+    void createInstanceOfStack() {
         LifoStack stack = new LifoStack();
     }
 
     @Test
-    void newStackIsEmpty(){
+    void newStackIsEmpty() {
         LifoStack stack = new LifoStack();
         assertTrue(stack.isEmpty());
     }
 
     @Test
-    void popFromEmptyStackThrowsException(){
+    void popFromEmptyStackThrowsException() {
         LifoStack stack = new LifoStack();
-        assertThrows(IllegalStateException.class,() -> stack.pop());
+        assertThrows(IllegalStateException.class, () -> stack.pop());
     }
 
     @Test
-    void pushOneItemToStackIsEmptyReturnsFalse(){
+    void pushOneItemToStackIsEmptyReturnsFalse() {
         LifoStack stack = new LifoStack();
         stack.push(0);
         assertFalse(stack.isEmpty());
     }
 
     @Test
-    void pushOneItemToStackPopReturnsThatItem(){
+    void pushOneItemToStackPopReturnsThatItem() {
         LifoStack stack = new LifoStack();
         stack.push(0);
         assertEquals(0, stack.pop());
     }
-
-
-
-
-
-
-
-
-
 }
