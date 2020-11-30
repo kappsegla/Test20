@@ -208,15 +208,16 @@
                     </execution>
                 </executions>
                 <configuration>
+                        <mutators>
+<!--                            <mutator>ALL</mutator>-->
+                            <mutator>DEFAULT</mutator>
+                        </mutators>
                     <targetClasses>
-                        <param>mtk.domain*</param>
+                        <param>mtk.domain.*</param>
                     </targetClasses>
                     <targetTests>
                         <param>mtk.*</param>
                     </targetTests>
-                    <mutators>
-                        <mutator>DEFAULTS</mutator>
-                    </mutators>
                 </configuration>
             </plugin>
         </plugins>
