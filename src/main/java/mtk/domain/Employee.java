@@ -41,4 +41,13 @@ public class Employee
     {
         this.salary = newSalary;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
 }

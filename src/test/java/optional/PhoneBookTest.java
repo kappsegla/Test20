@@ -1,12 +1,14 @@
 package optional;
 
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Disabled
 public class PhoneBookTest {
 
     private final PhoneBook phoneBook = new PhoneBook();

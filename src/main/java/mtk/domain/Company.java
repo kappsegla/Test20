@@ -31,7 +31,7 @@ public class Company {
      *                            parameter is 0.1, everyone at the company gets a 10% raise
      */
     public void everybodyGetsRaiseBy(double incrementAsFraction) {
-        this.employees.forEach(e -> e.setSalary(e.getSalary() * (incrementAsFraction)));
+        this.employees.forEach(e -> e.setSalary(e.getSalary() * (1.0 + incrementAsFraction)));
     }
 
     /**
@@ -41,14 +41,12 @@ public class Company {
      * @return the employee with the id passed as the parameter or null if no such employee exists
      */
     public Employee findEmployeeById(String id) {
-        int foundIndex = 0;
-        for (int i = 0; i < this.employees.size(); i++) {
-            if (this.employees.get(i).getId().equals(id)) {
-                foundIndex = i;
-                break;
+        for (Employee employee : this.employees) {
+            if (employee.getId().equals(id)) {
+                return employee;
             }
         }
-        return this.employees.get(foundIndex);
+        return null;
     }
 
     public int numberOfEmployees() {

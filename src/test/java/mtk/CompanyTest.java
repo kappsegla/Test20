@@ -7,8 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.verify;
 
 public class CompanyTest {
@@ -64,7 +63,7 @@ public class CompanyTest {
 
         Employee dave = this.company.findEmployeeById("123");
 
-        assertEquals(davesOriginalSalary * increaseBy, dave.getSalary(), 0.0001);
+        assertEquals(110000.0, dave.getSalary(), 0.0001);
     }
 
     @Test
@@ -75,6 +74,9 @@ public class CompanyTest {
 
         Employee hopefullyDave = this.company.findEmployeeById("123");
         Employee hopefullyNoOne = this.company.findEmployeeById("999");
+
+        assertEquals("Dave",hopefullyDave.getName());
+        assertNull(hopefullyNoOne);
     }
 
     @Test
@@ -87,5 +89,17 @@ public class CompanyTest {
         employee.setName("Tommy Lee");
         employee = this.company.findEmployeeById("123");
         System.out.println(employee.getName().equals("Tommy Lee") ? "PASSED" : "FAILED");
+    }
+
+    @Test
+    public void toStringPrintsInfoForEmployee()
+    {
+        var employee = new Employee("123", "Dave", 100_000.00);
+        var expected = "Employee{" +
+                "id='" + "123" + '\'' +
+                ", name='" + "Dave" + '\'' +
+                ", salary=" + 100_000.00 +
+                '}';
+        assertEquals(expected,employee.toString());
     }
 }

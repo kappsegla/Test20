@@ -13,6 +13,7 @@ import static org.mockito.Mockito.*;
 //Output based testing
 public class PriceEngine {
 
+    //Params notation ...
     public double calculateDiscount(Product... products) {
         double discount = products.length * 0.01;
         return Math.min(discount, 0.2);
@@ -41,12 +42,18 @@ class Product {
 class Order {
     private final List<Product> products = new ArrayList<>();
 
+    //Changes internal state, should return void
     public void AddProduct(Product product) {
         products.add(product);
     }
 
+    //Returns something, do not change internal state from methods that returns stuff.
+    public int productCount(){
+        return products.size();
+    }
+
     public List<Product> getProducts() {
-        return products.stream().collect(Collectors.toUnmodifiableList());
+       return products.stream().collect(Collectors.toUnmodifiableList());
     }
 
     @Test
@@ -62,12 +69,11 @@ class Order {
 
 interface EmailGateway {
 
-    void sendGreetingsEmail(String s);
+    void sendGreetingsEmail(String mailAdress);
 }
 
 //Communication based testing
 class Controller {
-
 
     private final EmailGateway emailGateway;
 
@@ -84,7 +90,7 @@ class Controller {
         var emailGatewayMock = mock(EmailGateway.class);
         var sut = new Controller(emailGatewayMock);
         sut.GreetUser("user@email.com");
-        verify(emailGatewayMock, atMostOnce()).sendGreetingsEmail("user@email.com");
+        verify(emailGatewayMock, atLeastOnce()).sendGreetingsEmail("user@email.com");
     }
 }
 

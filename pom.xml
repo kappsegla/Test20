@@ -210,7 +210,6 @@
                 <configuration>
                         <mutators>
 <!--                            <mutator>ALL</mutator>-->
-                            <mutator>DEFAULT</mutator>
                         </mutators>
                     <targetClasses>
                         <param>mtk.domain.*</param>
