@@ -99,7 +99,7 @@ public class CompanyTest {
                 "id='" + "123" + '\'' +
                 ", name='" + "Dave" + '\'' +
                 ", salary=" + 100_000.00 +
-                '}';
+                ", age=0" + '}';
         assertEquals(expected,employee.toString());
     }
 }
