@@ -1,7 +1,7 @@
 package mtk.domain;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Company {
     private String name = "No name";
@@ -51,5 +51,20 @@ public class Company {
 
     public int numberOfEmployees() {
         return 7;
+    }
+
+    public void addEmployees(List<Employee> employees) {
+        this.employees.addAll(employees);
+    }
+
+    public List<Employee> getEmployessOver18() {
+        return employees.stream().filter(employee -> employee.getAge() > 17).collect(Collectors.toList());
+//        List<Employee> result = new ArrayList<>();
+//        for (Employee employee : this.employees) {
+//            if (employee.getAge() > 17) {
+//                result.add(employee);
+//            }
+//        }
+//        return result;
     }
 }
