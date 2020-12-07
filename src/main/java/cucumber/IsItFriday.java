@@ -1,5 +1,6 @@
 package cucumber;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class IsItFriday {
@@ -12,4 +13,5 @@ public class IsItFriday {
     public int countFridays(List<String> days) {
         return (int) days.stream().filter(s -> s.equals("Friday")).count();
     }
+
 }

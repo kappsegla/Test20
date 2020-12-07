@@ -31,7 +31,7 @@ class InvoiceFilterTest {
         //Act
         var result = filter.filter();
 
-        //verify(invoiceDao).all();
+        //verify(invoiceDao).all();  //No, this is a query object, we don't care if it has been called or not.
         //Assert
         assertEquals(List.of(new Invoice("Martin", 10), new Invoice("Anna", 50)), result);
     }
