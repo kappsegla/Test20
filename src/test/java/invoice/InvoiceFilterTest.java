@@ -1,5 +1,7 @@
 package invoice;
 
+import org.junit.experimental.categories.Category;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -10,6 +12,7 @@ import static org.mockito.Mockito.*;
 class InvoiceFilterTest {
 
     @Test
+    @Tag("SlowTests")
     void filterReturnsOnlyInvoicesWithValueUnder100() {
         //Arrange
         InvoiceFilter filter = new InvoiceFilter(new InvoiceDaoStub());
