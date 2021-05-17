@@ -22,11 +22,11 @@ public class LifoStack {
 }
 
 
-    assertThrows()
-    assertThatThrownBy(()-> calculator.mul(1,)
-        .isInstanceOf(IllegalStateException.class)
-        assertThatExceptionOfType(IllegalStateException.class).isThrownBy()
-        assertThatIllegalStateException().isThrownBy()
+//    assertThrows()
+//    assertThatThrownBy(()-> calculator.mul(1,)
+//        .isInstanceOf(IllegalStateException.class)
+//        assertThatExceptionOfType(IllegalStateException.class).isThrownBy()
+//        assertThatIllegalStateException().isThrownBy()
 
 //
 //        Test on zero elements.
